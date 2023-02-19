@@ -17,7 +17,7 @@ export interface IproductItem {
     def: {
       isBulk: boolean;
       price: string | number;
-      promotionPrice: string | number;
+      promotionPrice: string;
       quantity: number;
       unit: string;
     };

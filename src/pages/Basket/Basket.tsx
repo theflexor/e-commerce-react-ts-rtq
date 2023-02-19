@@ -41,9 +41,10 @@ export const Basket = () => {
               </Box>
               <Box>
                 <Typography>
-                  {item.sku.def.promotionPrice
-                    ? Math.floor(String(item.sku.def.promotionPrice).split(" ")[0] * item.count)
-                    : item.sku.def.price }
+                  {typeof item.sku.def.promotionPrice == "string"
+                    ? Number(item.sku.def.promotionPrice.split(" ")[0]) *
+                      item.count
+                    : item.sku.def.price}
                   $
                 </Typography>
               </Box>
